@@ -8,7 +8,7 @@ class User < ApplicationRecord
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: true
   has_secure_password #Rails-provided method.
-  validates :password, presence: true, length: { minimum: 6 }
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true #Even though the allow_nil option is set to true here on the object, the empty password is still caught by the validations of has_secure_password method.
 
   # Returns the hash digest of the given string.
   def User.digest(string) #Two other ways to declare a method belong to the class; 1) By using self. instead of className. in front of the method name. 2) By defining a method inside the class << self ... end block.
