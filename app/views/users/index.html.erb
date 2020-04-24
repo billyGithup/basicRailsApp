@@ -2,6 +2,6 @@
 <h1>All users</h1>
 <%= will_paginate %>
 <ul class="users">
-  <%= render @users %> #Here, Rails knows the @users is a list of user objects and iterates it in the partial. Rails also knows the partial name by inferring it from the class name which is user. Rails magic!
+  <%= render @users %> <!-- Here, Rails knows the @users is a list of user objects and iterates it in the partial. Rails also knows the partial name by inferring it from the class name which is user. Rails magic! -->
 </ul>
 <%= will_paginate %>
